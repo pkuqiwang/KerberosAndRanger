@@ -1,6 +1,6 @@
 # KerberosAndRanger
 
-###Kerberos the cluster
+### Kerberos the cluster
 Log into Ambari Web UI and go to admin=>Kerberos, click Enable Kerberos
 Use the following entry values
 
@@ -29,7 +29,7 @@ show databases;
 !quit
 ```
 
-###Install NSCD for user group mapping
+### Install NSCD for user group mapping
 This step need to be done on all HDP nodes.
 
 Modify /etc/openldap/ldap.conf to the following
@@ -103,7 +103,7 @@ id hadoopadmin
 ```
 The step for all nodes is completed.
 
-###Update HDFS and YARN groups
+### Update HDFS and YARN groups
 exexute the following on resource manager node
 ```
 sudo -u hdfs kinit -kt /etc/security/keytabs/hdfs.headless.keytab hdfs@FIELD.HORTONWORKS.COM
@@ -112,7 +112,7 @@ sudo -u yarn kinit -kt /etc/security/keytabs/yarn.service.keytab yarn/qwang-hdp1
 sudo -u yarn yarn rmadmin -refreshUserToGroupsMappings
 ```
 
-###Ranger installation
+### Ranger installation
 Add service => Ranger 
 under ranger admin
 
